@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'second_route.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -25,12 +24,29 @@ class FirstRoute extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => SecondRoute()),
               );
             }
-          // Navigate to second route when tapped.
-        ),
+            // Navigate to second route when tapped.
+            ),
       ),
     );
   }
 }
 
-
-
+class SecondRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Route"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          // Within the SecondRoute widget
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
