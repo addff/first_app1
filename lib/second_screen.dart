@@ -6,7 +6,7 @@ class DetailScreen extends StatelessWidget {
   final Todo todo;
 
   // In the constructor, require a Todo.
-  DetailScreen({Key key, @required this.todo}) : super(key: key);
+  DetailScreen({Key key, @required this.todo, String text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
